@@ -1,7 +1,8 @@
-FROM aegypius/golang
+FROM ubuntu:14.04
 
-VOLUME /etc/confd/
+WORKDIR /usr/local/bin
 
-RUN go get -u github.com/kelseyhightower/confd
+RUN curl -fsSL https://github.com/kelseyhightower/confd/releases/download/v0.7.1/confd-0.7.1-linux-amd64 -o confd && \
+    chmod a+x confd
 
 CMD confd
