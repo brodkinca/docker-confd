@@ -11,15 +11,15 @@ configuration files using templates and data from etcd.
 
 You can use this base box standalone doing:
 
-    docker pull aegypius/confd
+    docker pull brodkinca/confd
 
 You can run it using a configuration volume (see [configuration guide](https://github.com/kelseyhightower/confd/blob/master/docs/configuration-guide.md)):
 
-    docker run -v /path/to/confd/config:/etc/confd -t aegypius/confd
+    docker run -v /path/to/confd/config:/etc/confd -t brodkinca/confd
 
 Or directly from command line:
 
-    docker run -t aegypius/confd -node http://etcd-server:4001
+    docker run -t brodkinca/confd -node http://etcd-server:4001
 
 ... where etcd-server is the IP or host of your etcd server
 
